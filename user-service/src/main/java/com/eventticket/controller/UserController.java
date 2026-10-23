@@ -1,16 +1,14 @@
 package com.eventticket.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.eventticket.dto.DtoUser;
+import com.eventticket.dto.DtoUserRegister;
+import com.eventticket.security.AuthRequest;
+import com.eventticket.security.AuthResponse;
 
-@RestController
-@RequestMapping(path = "/users")
-public class UserController {
+public interface UserController {
 
-    @GetMapping(path = "/service")
-    public String getUserService(){
-        return "User Service is running";
-    }
+    public DtoUser register(DtoUserRegister dtoUserRegister);
+
+    public AuthResponse authenticate(AuthRequest authRequest);
 
 }
