@@ -3,6 +3,8 @@ package com.eventticket.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "ticket")
 @Getter
@@ -16,6 +18,9 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @Column(name = "category_id")
+    private int categoryId;
 
     @Column(name = "name")
     private String name;
@@ -34,6 +39,15 @@ public class Ticket {
 
     @Column(name = "image_url")
     private String imageUrl;
+
+    @Column(name = "capacity")
+    private Long capacity;
+
+    @Column(name = "access_code")
+    private String accessCode;
+
+    @Column(name = "price")
+    private BigDecimal price;
 
     @Column(name = "sold_out")
     private boolean soldOut = false;

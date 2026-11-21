@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,6 +14,8 @@ import lombok.NoArgsConstructor;
 public class DtoTicket {
 
     private Long id;
+
+    private int categoryId;
 
     private String name;
 
@@ -24,6 +28,12 @@ public class DtoTicket {
     private String place;
 
     private String imageUrl;
+
+    private Long capacity;
+
+    private String accessCode;
+
+    private BigDecimal price;
 
     private boolean soldOut = false;
 

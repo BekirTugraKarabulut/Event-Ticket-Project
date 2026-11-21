@@ -4,12 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class DtoTicketUI {
 
     private Long id;
+
+    private int categoryId;
 
     private String name;
 
@@ -22,6 +26,12 @@ public class DtoTicketUI {
     private String place;
 
     private String imageUrl;
+
+    private Long capacity;
+
+    private String accessCode;
+
+    private BigDecimal price;
 
     private boolean soldOut = false;
 
