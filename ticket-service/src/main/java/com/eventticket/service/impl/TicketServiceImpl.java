@@ -94,4 +94,17 @@ public class TicketServiceImpl implements TicketService {
 
     }
 
+    @Override
+    public DtoTicket getTicketById(Long id) {
+
+        Optional<Ticket> ticket = ticketRepository.findById(id);
+
+        if(ticket.isPresent()){
+            return dtoTicketService.responseTicket(ticket.get());
+        }else{
+            throw new RuntimeException("Ticket not found");
+        }
+
+    }
+
 }

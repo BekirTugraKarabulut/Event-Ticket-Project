@@ -49,4 +49,10 @@ public class TicketControllerImpl implements TicketController {
         ticketService.deleteTicket(id);
     }
 
+    @Override
+    @GetMapping(path = "/{id}")
+    public DtoTicket getTicketById(@PathVariable(name = "id") Long id) {
+        return ticketService.getTicketById(id);
+    }
+
 }

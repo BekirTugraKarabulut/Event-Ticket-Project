@@ -18,4 +18,6 @@ public interface TicketService {
 
     public void deleteTicket(Long id);
 
+    public DtoTicket getTicketById(Long id);
+
 }
