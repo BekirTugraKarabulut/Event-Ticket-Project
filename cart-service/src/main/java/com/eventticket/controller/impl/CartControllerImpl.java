@@ -49,4 +49,10 @@ public class CartControllerImpl implements CartController {
         return cartService.sumPay(username);
     }
 
+    @DeleteMapping(path = "/all/{username}")
+    @Override
+    public void deleteAllCartsByUsername(@PathVariable(name = "username") String username) {
+        cartService.deleteAllCartsByUsername(username);
+    }
+
 }

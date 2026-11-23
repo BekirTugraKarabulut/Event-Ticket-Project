@@ -11,15 +11,6 @@
         <module name="eureka-server" />
         <module name="user-service" />
       </profile>
-      <profile name="Annotation profile for cart-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
-        </processorPath>
-        <module name="cart-service" />
-      </profile>
       <profile name="Annotation profile for ticket-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -28,7 +19,18 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
         </processorPath>
+        <module name="cart-service" />
         <module name="ticket-service" />
+      </profile>
+      <profile name="Annotation profile for credit-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.48/lombok-1.18.48.jar" />
+        </processorPath>
+        <module name="credit-service" />
+        <module name="purchased-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -36,7 +38,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="cart-service" options="-parameters" />
+      <module name="credit-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="purchased-service" options="-parameters" />
       <module name="ticket-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

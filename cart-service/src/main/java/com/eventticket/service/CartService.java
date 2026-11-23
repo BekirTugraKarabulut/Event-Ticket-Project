@@ -18,4 +18,6 @@ public interface CartService {
 
     public Integer sumPay(String username);
 
+    public void deleteAllCartsByUsername(String username);
+
 }

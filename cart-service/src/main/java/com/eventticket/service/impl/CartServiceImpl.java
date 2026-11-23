@@ -135,4 +135,17 @@ public class CartServiceImpl implements CartService {
                 .intValue();
     }
 
+    @Override
+    public void deleteAllCartsByUsername(String username) {
+
+        List<Cart> carts = cartRepository.findByUsername(username);
+
+        if(carts.isEmpty()){
+            throw new RuntimeException("Sepet ürünü bulunamadı!");
+        }
+
+        cartRepository.deleteAll(carts);
+
+    }
+
 }
