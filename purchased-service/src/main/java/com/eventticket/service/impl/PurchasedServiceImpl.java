@@ -84,6 +84,7 @@ public class PurchasedServiceImpl implements PurchasedService {
                 .map(
                         purchase -> {
                             DtoPurchase dto = new DtoPurchase();
+                            dto.setPurchaseId(purchase.getPurchaseId());
                             dto.setSepetId(purchase.getSepetId());
                             dto.setId(purchase.getId());
                             dto.setUsername(purchase.getUsername());

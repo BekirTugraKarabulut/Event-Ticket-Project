@@ -13,6 +13,8 @@ import java.math.BigDecimal;
 @Builder
 public class DtoPurchase {
 
+    private Long purchaseId;
+
     private Long sepetId;
 
     private Long id;
